@@ -7,23 +7,32 @@
   <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/></a>
 </p>
 
-## Somnia auto transfer every 24 hours
+### Somnia auto transfer every 24 hours
 
-### Sync
+#### Sync
 ```
 git clone dulu
 ```
 
-## Install Modul
+#### Install Modul
 ```
 pip install web3
 ```
 
-### Atur private key (increment)
+#### Set private key (increment)
 ```
-"pk1" to "your private key"
+PRIVATE_KEYS = [
+    "yourprivatekey1",
+    "yourprivatekey2",
+]
 ```
-### RUN Bot
+
+#### Set address target
+```
+TARGET_ADDRESS = "addresstarget" 
+```
+
+#### RUN Bot
 ```
 python3 run.py
 ```
