@@ -4,7 +4,7 @@ from web3 import Web3
 # Konfigurasi RPC dan alamat tujuan
 RPC_URL = "https://dream-rpc.somnia.network"
 TARGET_ADDRESS = "0xb21D7BC72e7214cf5D0EBbEB34cF1D57c602b989"  # Ganti dengan alamat tujuan
-AMOUNT = 0.01  # Dalam ETH
+AMOUNT = 0.003  # Dalam STT
 PRIVATE_KEYS = [
     "pk1",
     "pk2",
@@ -34,16 +34,14 @@ def send_transaction(private_key, target_address, amount_eth):
 
 def print_banner():
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
-    print(
-        "\033[1;35m" + " INITVERSE | AIRDROP ASC " + "\033[0m".center(57)
-    )  # Bold Magenta
+    print("\033[1;35m" + " SOMNIA TESTNET | AIRDROP ASC " + "\033[0m".center(57))  # Bold Magenta
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
     print("\033[93m" + "Credit By       : Airdrop ASC" + "\033[0m")  # Yellow
     print("\033[93m" + "Telegram Channel: @airdropasc" + "\033[0m")  # Yellow
     print("\033[93m" + "Telegram Group  : @autosultan_group" + "\033[0m")  # Yellow
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
 
-# Loop utama untuk transfer setiap 24 jam
+# Loop utama untuk transfer setiap 6 jam
 def main():
     while True:
         for i, private_key in enumerate(PRIVATE_KEYS):
@@ -52,11 +50,19 @@ def main():
                 print(f"Transfer {i + 1} aman dong. Tx Hash: {tx_hash}")
             except Exception as e:
                 print(f"Transfer {i + 1} error cok. Error: {str(e)}")
-        print("Besok lagi ya guys ya, auto send setiap 24 jam kok")
-        time.sleep(24 * 60 * 60)  # Tunggu 24 jam
+        print("Transaksi selesai. Auto send lagi dalam 6 jam.")
+
+        # Timer countdown 6 jam
+        countdown_seconds = 6 * 60 * 60  # 6 jam dalam detik
+        while countdown_seconds > 0:
+            hours, remainder = divmod(countdown_seconds, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            print(f"⏳ Waktu tersisa: {hours:02d}:{minutes:02d}:{seconds:02d}", end="\r")
+            time.sleep(1)
+            countdown_seconds -= 1
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("Program rusak.")
+        print("Program dihentikan.")
