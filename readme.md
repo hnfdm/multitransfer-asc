@@ -7,6 +7,8 @@
   <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/></a>
 </p>
 
+#### Somnita Auto Transfer Every 6 Hours
+
 ```
 git clone dulu
 ```
