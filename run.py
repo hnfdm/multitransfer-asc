@@ -4,7 +4,7 @@ from web3 import Web3
 # Konfigurasi RPC dan alamat tujuan
 RPC_URL = "https://dream-rpc.somnia.network"
 TARGET_ADDRESS = "0xb21D7BC72e7214cf5D0EBbEB34cF1D57c602b989"  # Ganti dengan alamat tujuan
-AMOUNT = 0.003  # Dalam STT
+AMOUNT = 0.003  # Dalam ETH
 PRIVATE_KEYS = [
     "pk1",
     "pk2",
@@ -34,7 +34,7 @@ def send_transaction(private_key, target_address, amount_eth):
 
 def print_banner():
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
-
+    print("\033[1;35m" + " SOMNIA TESTNET | AIRDROP ASC " + "\033[0m".center(57))  # Bold Magenta
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
     print("\033[93m" + "Credit By       : Airdrop ASC" + "\033[0m")  # Yellow
     print("\033[93m" + "Telegram Channel: @airdropasc" + "\033[0m")  # Yellow
