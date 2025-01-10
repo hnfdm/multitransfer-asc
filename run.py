@@ -34,7 +34,7 @@ def send_transaction(private_key, target_address, amount_eth):
 
 def print_banner():
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
-    print("\033[1;35m" + " SOMNIA TESTNET | AIRDROP ASC " + "\033[0m".center(57))  # Bold Magenta
+
     print("\033[96m" + "=" * 57 + "\033[0m")  # Cyan
     print("\033[93m" + "Credit By       : Airdrop ASC" + "\033[0m")  # Yellow
     print("\033[93m" + "Telegram Channel: @airdropasc" + "\033[0m")  # Yellow
