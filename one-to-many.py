@@ -6,8 +6,11 @@ RPC_URL = "https://rpc-mainnet.inichain.com"
 web3 = Web3(Web3.HTTPProvider(RPC_URL))
 
 # Pastikan koneksi ke node berhasil
-if not web3.is_connected():
-    print("Gagal terhubung ke RPC")
+try:
+    print("Connected to RPC:", web3.is_connected())
+    print("Latest block:", web3.eth.block_number)
+except Exception as e:
+    print("Error connecting to RPC:", str(e))
     exit()
 
 # Konfigurasi
