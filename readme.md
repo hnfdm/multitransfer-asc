@@ -33,7 +33,7 @@ nano one-to-many.py
 nano many-to-one.py
 ```
 
-#### 54️⃣ Run the bot
+#### 4️⃣ Run the bot
 
 - For One to Many
 ```sh
