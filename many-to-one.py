@@ -8,6 +8,10 @@ AMOUNT = 0.003  # Dalam ETH
 PRIVATE_KEYS = [
     "pk1",
     "pk2",
+    "pk3",
+    "pk4",
+    "pk5", 
+    "pk6",
 ]  # Ganti dengan private keys dari akun Anda
 
 # Inisialisasi koneksi ke RPC
