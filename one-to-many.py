@@ -12,22 +12,28 @@ if not web3.is_connected():
 
 # Konfigurasi
 PRIVATE_KEY = "pk"  # Ganti dengan private key Anda 
-SOURCE_ADDRESS = web3.to_checksum_address("0xsender")  # Ganti dengan alamat pengirim Anda
+SOURCE_ADDRESS = web3.to_checksum_address("0x")  # Ganti dengan alamat pengirim Anda
 TARGET_ADDRESSES = [
+    "0xC10ffD8a9FCF23EE2Cf1E79a4F21C0A68DCD3eCa",
+    "0x06Eb3B10F633A3f864C3a5A54AEb8Dab6b036b17",
+    "0x07dFEa84E83A45cFAA4C795e53664A7F35b9be6D",
+    "0xaAa921B36d4A8998C88ea089807940d1ba486F7B",
+    "0x85A89030F53C8320c1fB1c8CBA99593A7beF234C",
+    "0x55b425EA78555a22D889d016019fACF20cB3dE15",
+    "0x5d2235E99E6567Af0A2719683170c8d70178b45A",
+    "0x158402ad9332727494BEcDFb8CfFf77b78DfD78B",
+    "0x3928924ae1503fb0a47a58ffa3110a5817b2ec0a",
+    "0x6c99F197Eda74CD1ad1c89b9F49bBecd38ebe716",
     "0xCA28D5e42e44Ab650aee53d4A2F171B69E3349E9",
     "0x2c81e0abd1c932596ac11e2cb0f6ddf8b35a5007",
     "0xbB075bC5017B10000f6f5049F5c0Cad1B89a1a58",
     "0xDc8a8C6996C99ab2b002DBC75182Ab6B2b423449",
     "0xbb5a852eb0bc0385ae7bb27f6a3fea2959442126",
     "0x8C805bFDc1919d92eDcEfD2B513903c244D6da17",
-    "0x5d2235E99E6567Af0A2719683170c8d70178b45A",
-    "0x158402ad9332727494BEcDFb8CfFf77b78DfD78B",
-    "0x3928924ae1503fb0a47a58ffa3110a5817b2ec0a",
-    "0x6c99F197Eda74CD1ad1c89b9F49bBecd38ebe716",
     # Tambahkan alamat target lainnya
 ]
 
-AMOUNT = web3.to_wei(0.0001, 'ether')  # Jumlah yang akan dikirim per transaksi
+AMOUNT = web3.to_wei(0.00001, 'ether')  # Jumlah yang akan dikirim per transaksi
 GAS_LIMIT = 21000
 GAS_PRICE = web3.to_wei(2, 'gwei')
 
@@ -58,19 +64,19 @@ def main():
             except Exception as e:
                 print(f"Transfer ke {target_address} gagal. Error: {str(e)}")
 
-            # Countdown 5 menit sebelum transaksi berikutnya
-            print("Menunggu 5 menit sebelum transaksi berikutnya...")
-            countdown_seconds = 5 * 60  # 5 menit dalam detik
+            # Countdown 10 detik sebelum transaksi berikutnya
+            print("Menunggu 10 detik sebelum transaksi berikutnya...")
+            countdown_seconds = 10  # 10 detik
             while countdown_seconds > 0:
                 minutes, seconds = divmod(countdown_seconds, 60)
                 print(f"⏳ Waktu tersisa: {minutes:02d}:{seconds:02d}", end="\r")
                 time.sleep(1)
                 countdown_seconds -= 1
 
-        print("\nSemua transfer selesai. Menunggu 10 menit sebelum memulai lagi...")
+        print("\nSemua transfer selesai. Menunggu 24 jam sebelum memulai lagi...")
 
-        # Timer countdown 10 menit
-        countdown_seconds = 10 * 60  # 10 menit dalam detik
+        # Timer countdown 24 jam
+        countdown_seconds = 24 * 60 * 60  # 24 jam dalam detik
         while countdown_seconds > 0:
             minutes, seconds = divmod(countdown_seconds, 60)
             print(f"⏳ Waktu tersisa: {minutes:02d}:{seconds:02d}", end="\r")
