@@ -1,38 +1,52 @@
-<p align="center">
-  <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/209359981-dc19b4bf-854d-4a2a-b803-2547a7fa43f2.jpg">
-</p>
+### 🎲 Multi Transfer EVM
 
-<p style="font-size:10px" align="left">
-  <a href="https://t.me/airdropasc" target="_blank"> 
-  <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/></a>
-</p>
+A simple bot to automate multi-transfer on EVM based.
 
-### Somnita Auto Transfer Every 6 Hours
+### 🚀 Features
+- *Adjustable Time* 
+- *Multi Account*
+- *One to Many*
+- *Many to One*
 
-#### Clone dulu
-```
-git clone dulu
-```
+### ✨ DONT FORGET TO FOLLOW AND SHOW YOUR SUPPORT WITH A STAR
 
-#### Install Modul
-```
-pip install web3
+### 🛠️ Installation
+
+#### 1️⃣ Clone repository
+```sh
+git clone https://github.com/hnfdm/multitransfer-asc.git 
 ```
 
-#### Set private key (increment)
-```
-PRIVATE_KEYS = [
-    "yourprivatekey1",
-    "yourprivatekey2",
-]
+#### 2️⃣ Enter & install dependencies
+```sh
+cd multitransfer-asc && pip install web3
 ```
 
-#### Set address target
-```
-TARGET_ADDRESS = "addresstarget" 
+#### 3️⃣ Edit **Private Key & Address** file
+
+```sh
+nano one-to-many.py
 ```
 
-#### RUN Bot
+
+```sh
+nano many-to-one.py
 ```
-python3 run.py
+
+#### 54️⃣ Run the bot
+
+- For One to Many
+```sh
+node one-to-many.py
 ```
+- For Many to One
+```sh
+node many-to-one.py
+```
+
+### 🛒 Prerequisite
+- Python
+- Web3 Module
+
+### 📝 License
+MIT License - feel free to use and modify for your own purposes.
