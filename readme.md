@@ -37,11 +37,11 @@ nano many-to-one.py
 
 - For One to Many
 ```sh
-node one-to-many.py
+python one-to-many.py
 ```
 - For Many to One
 ```sh
-node many-to-one.py
+python many-to-one.py
 ```
 
 ### 🛒 Prerequisite
